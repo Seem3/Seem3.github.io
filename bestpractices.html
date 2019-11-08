@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>HTML Best Practices</title>
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>
+      <h1>HTML Best Practices</h1>
+    </header>
+
+    <main>
+      <section>
+        <h2>Why Best Practices?</h2>
+
+        <p>HTML is a forgiving language, but mistakes can break a page.</p>
+
+        <p>Following best practices:</p>
+
+        <ul>
+          <li>keeps code well-organized for yourself and others</li>
+          <li>ensures code is standards-compliant</li>
+          <li>helps develop good habits</li>
+          <li>helps avoid common bugs</li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Define a DOCTYPE</h2>
+
+        <p>The <code>&lt;!DOCTYPE html&gt;</code> tag informs the browser you are using HTML5.</p>
+
+        <p>Without a doctype, a browser renders the page in 'quirks mode,' which may break it.</p>
+      </section>
+
+
+      <section>
+        <h2>Structure the document</h2>
+
+        <p>Using <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code> ensures backward compatibility.</p>
+      </section>
+
+
+      <section>
+        <h2>Declare a language</h2>
+
+        <p><code>&lt;html lang="en"&gt;</code></p>
+
+        <p>Setting a default language in <code>&lt;html&gt;</code> can influence:</p>
+
+        <ul>
+          <li>hyphenation</li>
+          <li>font selection</li>
+          <li>search engine optimization</li>
+          <li>translation tools</li>
+        </ul>
+
+        <p>If content is written in a language other than English (<code>en</code>), use the appropriate <a href="https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry">two-letter language code</a>.</p>
+      </section>
+
+
+      <section>
+        <h2>More on Language</h2>
+
+        <p><code>lang</code> is a global attribute, which means it can be used with any element.</p>
+
+        <p>If the content in a document switches languages, add the <code>lang</code> attribute to the element containing foreign text:</p>
+
+        <p><code>&lt;p lang="fr"&gt;Les chats sont amicaux!&lt;/p&gt;</code></p>
+      </section>
+
+
+      <section>
+        <h2>Declare a character set</h2>
+
+        <p>A character set defines how letters, numbers and special characters should be displayed in a browser. <code>UTF-8</code> includes 1.1 million characters. It is used by 85 percent of the web.</p>
+
+        <p>Include a <code>&lt;meta&gt;</code> tag within the head of the document.</p>
+
+        <p><code>&lt;meta charset="UTF-8" /&gt;</code></p>
+      </section>
+
+
+      <section>
+        <h2>Write code in lowercase</h2>
+
+        <p>Write HTML elements, attributes and values in lowercase.</p>
+
+        <p><code>&lt;p class="intro"&gt;This is a sentence&lt;/p&gt;</code></p>
+
+        <p><em>One Exception:</em> When filling in values for <code>alt</code> or <code>title</code> attributes, mixed case is okay since the values represent content, not code.</p>
+
+        <p><code>&lt;img src="flynn.jpg" alt="Flynn the cat" /&gt;</code></p>
+
+        <p><small>Also: Always use lowercase for naming files!</small></p>
+      </section>
+
+
+      <section>
+        <h2>Close tags</h2>
+
+        <p>Tags should always be closed.</p>
+
+        <p>If a tag is self-closing, add a slash (<code>/</code>) at the end of the tag. This will help remind you there is no closing element later in the document.</p>
+      </section>
+
+
+      <section>
+        <h2>Indent nested code</h2>
+
+        <p>Every time a tag is placed inside an open tag, indent the nested tag. This helps keep track of open tags.</p>
+
+        <pre>&lt;ul&gt;<br/>  &lt;li&gt;apple&lt;/li&gt;<br/>&lt;/ul&gt;</pre>
+      </section>
+
+
+      <section>
+        <h2>Double quote attribute values</h2>
+
+        <p>Unquoted attribute values lead to broken code.</p>
+
+        <p>In the example below, a browser would see "the" and "cat" as attributes without values; these attributes do not exist.</p>
+
+        <p><strong>Bad:</strong> <code>&lt;img src=flynn.jpg alt=Flynn the cat /&gt;</code></p>
+
+        <p><strong>Good:</strong> <code>&lt;img src="flynn.jpg" alt="Flynn the cat" /&gt;</code></p>
+      </section>
+
+
+      <section>
+        <h2>Use the <code>alt</code> attribute with <code>&lt;img /&gt;</code></h2>
+
+        <p>The <code>alt</code> attribute:</p>
+
+        <ul>
+          <li>provides backup text for a broken image</li>
+          <li>assists screen readers</li>
+          <li>provides search engines with context</li>
+        </ul>
+
+        <p>Provide a meaningful value for the <code>alt</code> attribute.</p>
+      </section>
+
+
+      <section>
+        <h2>Avoid using presentational elements</h2>
+
+        <p>If you find yourself using a tag <em>solely</em> for visual purposes, reconsider your choice.</p>
+
+        <p>Ask yourself: Are you giving the information context or just making it look good?</p>
+
+        <p>If you use these tags, you should be able to justify their use:</p>
+
+        <ul>
+          <li><code>&lt;b&gt;</code> (consider <code>&lt;strong&gt;</code> instead)</li>
+          <li><code>&lt;i&gt;</code> (consider <code>&lt;em&gt;</code> instead)</li>
+          <li><code>&lt;hr /&gt;</code> (visual accomplished with CSS)</li>
+          <li><code>&lt;br /&gt;</code> (rarely used, visual accomplished with CSS)</li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Validate your code</h2>
+
+        <p>The W3C provides a <a href="http://validator.w3.org">validator</a> to check HTML for standards compliance.</p>
+
+        <p>Valid HTML:</p>
+
+        <ul>
+          <li>ensures forward, backward compatibility</li>
+          <li>limits issues when adding CSS, JavaScript</li>
+          <li>can root out errors, bugs</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p><a href="index.html">&laquo; Course Notes</a></p>
+    </footer>
+  </body>
+</html>
