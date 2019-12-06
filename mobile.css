@@ -1,0 +1,40 @@
+@media (max-width: 414px) {  
+
+  body {
+    background-image: none;
+    font-size: 20px;
+  }
+
+ 
+
+  #home {
+    border: 0;
+    margin: 0;
+    padding: 10px; /* was equal to 24px! */
+  }
+
+   
+
+  header span {
+    display: inline;
+  }
+
+  
+  nav ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  
+
+  nav li {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
+
+ 
+
+  nav a {
+    display: block;
+    max-width: 100%;

@@ -1,26 +1,46 @@
 
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Exo&display=swap')
+@import url('https://fonts.googleapis.com/css?family=Exo&display=swap');
 
 body {
 	font-family:"Fira Sans","Helvetica", "Arial", sans-serif;
 	font-size: 18px;
-	background-color: rgb(0,128,128);
-	color: white;
-	margin-left: 40px;
+	margin: 40px;
 	border: 20px;
 	padding:20px;
+	background-color: black;
+	color: white;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+
+
+li a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
 }
 
 
 header{
-	margin-top: 40px;
+	margin-top: 100px;
+  color: white;
 
 }
 
 p{
 	float: right;
 	font-size: 10px;
+	font-color:white;
+}
+
+h2{
+	margin:20px;
 }
 
 h1{
@@ -32,29 +52,29 @@ h1{
 li{
 	font-family: "Fira Sans", "Helvetica", "Arial", sans-serif;
 	font-weight: 800;
+	margin:20px;
+	border: 20px;
+  list-style: none;
 }
 
 section {
- margin: 50px;
- background-color: green;
+text-align: left;
+ margin: 60px;
  border: 20px;
- color: black
+ border-left: 20px;
+ color: black;
  padding: 3000px auto;
- 
-}
+ color: white;
+ }
 
 main {
-  display: grid;
-  grid-template-columns: 2fr 2fr;
   padding: 20px auto;
   margin: 20px;
   border-spacing: 60px;
   grid-gap: 20px;
   grid-template:
-  
   font-size: 18px;
-  background-color: rgb(255, 140,0);
-  border-radius: 5px;
+  border-radius: 20px;
 }
 
 article{
@@ -68,20 +88,33 @@ nav a{
   display: inline-block;
   width: 5.5em;
   font-color:black;
-  background-color: green;
+  background-color: white;
 }
 
-nav a:visited{
+nav {
   text-decoration: none;
   text-align: center;
   margin: 0;
   display: inline-block;
   width: 5.5em;
+  color: black;
+  margin-bottom:20px;
+  padding-left: 30px;
 }
 
-nav a:hover{
-  color: white;
-  background-color: black;
+li a:visited{
+  color:black;
+
+}
+
+li a:hover {
+  color: black;
+  background-color: blue;
+}
+
+li a.active {
+  color: black;
+  background-color: orange;
 }
 
 nav{
@@ -89,15 +122,166 @@ nav{
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgb(255, 140,0);
-  width: 100%;
+  margin-left: 190px;
+  background-color: black;
+  width: 65%;
 }
 
 nav ul{
   list-style: none;
-  margin: 0;
+  margin: 0px;
   font-size: 1em;
   display: flex;
   justify-content: space-around;
-  border-bottom: 5px solid green;
+  border-bottom: 5px solid white;
+  margin-bottom: 20px;
+
+
+
+}
+
+
+#home{
+  font-family:"Fira Sans","Helvetica", "Arial", sans-serif;
+	color: black;
+	background-color: black;
+  max-width: 960px;
+  margin: 0 auto;
+
+}
+#event{
+  font-family:"Fira Sans","Helvetica", "Arial", sans-serif;
+  color: black;
+  background-color: black;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+  }
+#eboard{
+  font-family:"Exo","Helvetica", "Arial", sans-serif;
+  color: black;
+  background-color: black;
+  max-width: 960px;
+  margin: 0 auto;
+
+}
+#portfolio{
+  font-family:"Exo","Helvetica", "Arial", sans-serif;
+  color: black;
+  background-color: black;
+  max-width: 960px;
+  margin: 0 auto;
+  
+}
+#bondlogo{
+  margin-left: 330px;
+  position: center;
+  margin-top: 0px;
+  padding-top: 70px;
+  margin-bottom: 0px;
+  border-bottom: 0px;
+
+}
+
+#eboardpic{
+  margin-left: 20px;
+}
+
+#elayout{
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  /*grid-template-rows: 50px 100px;*/
+  grid-gap: 0px;
+  max-width: 960px;
+
+}
+
+#eboardt{
+  margin-top: 0px;
+  background-color: grey;
+  margin-left: 0px;
+  
+  text-align: center;
+}
+
+#eboardc{
+  margin-right: 0px;
+  font-size: 15px;
+}
+
+
+#lilp{
+  font-size: 12px;
+}
+
+
+
+p{
+	font-size: 20px;
+  margin: 20px;
+  margin-top: 0px;
+  margin-left: 0px;
+}
+
+#esection{
+  padding-top: -15px;
+  margin-top: 0px;
+}
+
+
+#bond{
+	text-align:center;
+  background-color: grey;
+  margin-top: 0px;
+  margin-left: 0px;
+  
+}
+
+#postions{
+  margin-left: 90px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+div {
+  box-sizing: border-box;
+  margin-bottom: 0px;
+  padding-top: 60px;
+  padding-bottom: 0px;
+  padding-left: 35px;
+
+}
+
+
+.column {
+  justify-content: center;
+  float: left;
+  width: 50%;
+  padding-top: 0px;
+  margin-bottom: 0px;
+
+}
+
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  border-bottom: 0px;
 }
